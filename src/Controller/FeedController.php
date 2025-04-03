@@ -32,7 +32,7 @@ class FeedController extends AbstractController
             $entityManager->persist($feed);
             $entityManager->flush();
 
-            return new Response('Donnée ajoutée avec succès !');
+            return $this->render('add_data/index.html.twig');
         }
         return $this->render('add_data/index.html.twig');
     }
