@@ -67,12 +67,12 @@ class Feed
         return $this;
     }
 
-    public function getDate(): ?\DateTime
+    public function getCreatedAt(): ?\DateTime
     {
         return $this->createdAt;
     }
 
-    public function setDate(\DateTime $date): static
+    public function setCreatedAt(\DateTime $date): static
     {
         $this->createdAt = $createdAt;
 
