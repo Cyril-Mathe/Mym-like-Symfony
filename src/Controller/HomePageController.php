@@ -19,7 +19,6 @@ final class HomePageController extends AbstractController
         foreach ($feeds as $feed) {
             $imageData[] = $feed->getContent();
         }
-        dd($feeds);
 
         return $this->render('home_page/index.html.twig', [
             'feed' => $feeds,
