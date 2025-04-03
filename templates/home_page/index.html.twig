@@ -9,12 +9,19 @@
 </style>
 
 <div class="example-wrapper">
-    
+
     {% for feed in feed %}
-        <div>{{ feed.user }}</div>
-        <div>{{ feed.content }}</div>
-        <div>{{ feed.description }}</div>
-        <div>{{ feed.createdAt|date('Y-m-d H:i:s') }}</div>
+    <div>
+        <p>User: {{ feed.user }}</p>
+        <p>Description: {{ feed.description }}</p>
+        <p>Date: {{ feed.createdAt|date('Y-m-d H:i:s') }}</p>
+        
+        {% if feed.content %}
+            <img src="data:image/png;base64,{{ feed.content }}" alt="Feed image" />
+        {% else %}
+            <p>No image available</p>
+        {% endif %}
+    </div>
     {% endfor %}
     
 </div>

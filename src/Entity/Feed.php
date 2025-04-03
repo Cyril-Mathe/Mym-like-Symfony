@@ -17,8 +17,8 @@ class Feed
     #[ORM\Column(length: 255)]
     private ?string $user = null;
 
-    #[ORM\Column(type: Types::BLOB)]
-    private $content;
+    #[ORM\Column(length: 10000000, nullable: true)]
+    private ?string $content;
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $description = null;
@@ -72,7 +72,7 @@ class Feed
         return $this->createdAt;
     }
 
-    public function setCreatedAt(\DateTime $date): static
+    public function setCreatedAt(\DateTime $createdAt): static
     {
         $this->createdAt = $createdAt;
 

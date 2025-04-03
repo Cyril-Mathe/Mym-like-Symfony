@@ -10,13 +10,20 @@ use App\Entity\Feed;
 
 final class HomePageController extends AbstractController
 {
-    #[Route('/home/page', name: 'app_home_page')]
+    #[Route('/', name: 'app_home_page')]
     public function index(EntityManagerInterface $entityManager): Response
     {
-        $feedRepository=$entityManager->getRepository(Feed::class);
-        $feed1=$feedRepository->findAll();
+        $feedRepository = $entityManager->getRepository(Feed::class);
+        $feeds = $feedRepository->findAll();
+        $imageData = [];
+        foreach ($feeds as $feed) {
+            $imageData[] = $feed->getContent();
+        }
+        dd($feeds);
+
         return $this->render('home_page/index.html.twig', [
-            'feed' => $feed1,
+            'feed' => $feeds,
+            'imageData' => $imageData,
         ]);
     }
 }
