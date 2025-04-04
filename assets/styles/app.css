@@ -1,3 +1,38 @@
+
+
 body {
-    background-color: skyblue;
+    background-color: rgb(251, 155, 45);
+}
+
+.input {
+    background-color: white;
+    border: 6px solid rgba(117, 193, 143, 0.607);
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.text-user {
+   color: rgb(255, 255, 255);
+}
+
+.profil-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.icons {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.search-input {
+    background-image: url('/icons/search.png'); 
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  padding-left: 45px;
+  background-size: 30px 30px;
 }

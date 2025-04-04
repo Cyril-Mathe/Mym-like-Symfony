@@ -2,24 +2,62 @@
 <html>
 <head>
     <title>Ajouter un Feed</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
+
 </head>
 <body>
-    <h1>Ajouter un Feed</h1>
-    <form method="post" enctype="multipart/form-data">
-        <label for="user">Utilisateur :</label>
-        <input type="text" id="user" name="user" required>
-        <br><br>
+     <nav class="navbar navbar-expand-lg bg-primary fixed-top">
+            <div class="container-fluid d-flex align-items-center">
+                
+                <!-- droite -->
+                <div class="d-flex align-items-center gap-3">
+                    <img src="../AJOUTER.PNG" alt="LOGO" class="ms-3" width="50" height="50" />
+                    <img src="{{ asset('icons/burger.png') }}" alt="burger input" class="icons"/>
+                </div>
 
-        <label for="content">Contenu :</label>
-        <input type='file' id="content" name="content" accept="image/*" required></input>
-        <br><br>
+                <!-- Barre centre -->
+                <div class="mx-auto">
+                    <input 
+                        type="text" 
+                        class="form-control border border-dark search-input" 
+                        placeholder="Search..."
+                    />
+                </div>
 
-        <label for="description">Description :</label>
-        <input type="text" id="description" name="description">
-        <br><br>
+                <!-- gauche -->
+                <div class="d-flex align-items-center gap-3 me-3">
+                    <img src="{{ asset('icons/parameter.png') }}" alt="parameter" class="icons" />
+                    <div class="bg-warning rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                        <img src="{{ asset('images/profil.jpg') }}" alt="image de profil" class="profil-pic">
+                    </div>
+                </div>
+            </nav>
 
-        <button type="submit">Ajouter</button>
-    </form>
-    <a href="/" class="btn btn-primary">Retourner à la home page</a>
+        <div class="mt-navbar" style="margin-top: 80px; padding: 20px;">
+            <div class="d-flex flex-column align-items-center">
+
+                <h1 class="border border-warning" style="border-radius: 10px; padding-bottom: 10px; background-color:rgb(244, 220, 0);">
+                    Ajouter un Feed
+                </h1>
+
+                <form method="post" enctype="multipart/form-data" class="border" style="border-radius: 10px; padding: 20px; background-color:rgb(125, 6, 237);">
+                    <label for="user" class="text-user">Utilisateur :</label>
+                    <input type="text" id="user" name="user" class="input" required>
+                    <br><br>
+
+                            <label for="content" class="text-user">Contenu :</label>
+                            <input type='file' id="content" name="content" accept="image/* "required></input>
+                            <br><br>
+
+                            <label for="description" class="text-user">Description :</label>
+                            <input type="text" id="description" name="description" class="input">
+                            <br><br>
+                            <button class="btn btn-success" type="submit">Ajouter</button>
+                        </form>
+                        <br>
+                        <a href="/" class="btn btn-primary">Retourner à la home page</a>
+            </div>
+        </div>
 </body>
 </html>
