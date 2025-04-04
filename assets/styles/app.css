@@ -1,3 +1,91 @@
+
+
 body {
-    background-color: skyblue;
+    background-color: #a8d5ad;
 }
+
+/* Add Feed */
+
+.input {
+    background-color: white;
+    border: 6px solid rgba(117, 193, 143, 0.607);
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.text-user {
+   color: rgb(255, 255, 255);
+}
+
+.profil-pic {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.icons {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.search-input {
+    background-image: url('/icons/search.png'); 
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  padding-left: 45px;
+  background-size: 30px 30px;
+}
+
+
+/* Home */
+
+
+
+/* .user-info {
+    background-color: aqua;
+} */
+
+.content {
+    border: solid ;
+    border-color: rgb(62, 64, 61);
+    border-radius: 30px;
+    width: 700px;
+    padding: 40px 40px;
+    background-color: rgba(128, 0, 0, 0.276);
+}
+
+
+
+.space {
+    margin-top: 30px;
+}
+
+.block-gif {
+    color: tomato;
+}
+
+.submit {
+    background: #9ed013;
+    font-family: inherit;
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 18px;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+    cursor: pointer;
+    margin-top: 30px;
+  }
+  
+  button:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+  }
+  
+  button:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+  }
