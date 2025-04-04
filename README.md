@@ -33,30 +33,24 @@ Réalisation d'un feed type instagram , ajout d'une image , pseudo et descriptio
 
 ## Backend
 
-3. Accédez au backend :
-
-    ```bash
-    cd backend
-    ```
-
-4. Installez les dépendances :
+3. Installez les dépendances :
     ```bash
     composer install
     ```
 
 ### Démarrage du backend
 
-5. Une toute dernière étape avant de lancer le backend, utilisez les deux commandes suivantes pour créer une table et appliquer les migrations :
+4. Une toute dernière étape avant de lancer le backend, utilisez les deux commandes suivantes pour créer une table et appliquer les migrations :
 
  ```bash
 php bin/console doctrine:database:create
 ```
 
  ```bash
-pphp bin/console doctrine:migrations:migrate
+php bin/console doctrine:migrations:migrate
 ```
 
-6. Vous pouvez maintenant lancer le backend :
+5. Vous pouvez maintenant lancer le backend :
 
    ```bash
    symfony server:start
