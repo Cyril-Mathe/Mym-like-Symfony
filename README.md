@@ -18,7 +18,7 @@ Réalisation d'un feed type instagram , ajout d'une image , pseudo et descriptio
 - #### William : [@GitHub](https://github.com/Wyll-exe)
 - #### Arthur: [@GitHub](https://github.com/L0wBly)
 - #### Cyril: [@GitHub](https://github.com/Cyril-Mathe)
-- ### Soufiane: [@GitHub](https://github.com/SoufianeBenmouhoub)
+- #### Soufiane: [@GitHub](https://github.com/SoufianeBenmouhoub)
 
 ## Maquette Figma :
 
