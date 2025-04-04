@@ -22,7 +22,7 @@ Réalisation d'un feed type instagram , ajout d'une image , pseudo et descriptio
 
 ## Maquette Figma :
 
-- [@Figma](https://www.figma.com/design/quqKKDg7zIZ6k3izkKAMAh/Untitled?node-id=0-1&t=BRcYYKgGOfIEpIKQ-1)
+- [Figma](https://www.figma.com/design/quqKKDg7zIZ6k3izkKAMAh/Untitled?node-id=0-1&t=BRcYYKgGOfIEpIKQ-1)
 
 
 ## Installation
