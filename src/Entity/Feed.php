@@ -17,8 +17,8 @@ class Feed
     #[ORM\Column(length: 255)]
     private ?string $user = null;
 
-    #[ORM\Column(length: 10000000, nullable: true)]
-    private ?string $content;
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
+    private ?string $content = null;
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $description = null;
