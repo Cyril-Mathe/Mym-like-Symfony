@@ -6,23 +6,63 @@
 <style>
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
 </style>
 
-<div class="example-wrapper">
+    <nav class="navbar navbar-expand-lg bg-primary fixed-top">
+            <div class="container-fluid d-flex align-items-center">
+                
+                <!-- droite -->
+                <div class="d-flex align-items-center gap-3">
+                    <img src="../AJOUTER.PNG" alt="LOGO" class="ms-3" width="50" height="50" />
+                    <img src="{{ asset('icons/burger.png') }}" alt="burger input" class="icons"/>
+                </div>
 
-    {% for feed in feed %}
-    <div>
-        <p>User: {{ feed.user }}</p>
-        <p>Description: {{ feed.description }}</p>
-        <p>Date: {{ feed.createdAt|date('Y-m-d H:i:s') }}</p>
-        
-        {% if feed.content %}
-            <img src="data:image/png;base64,{{ feed.content }}" alt="Feed image" />
-        {% else %}
-            <p>No image available</p>
-        {% endif %}
-    </div>
-    {% endfor %}
-    <a href="/add" class="btn btn-primary">Ajouter</a>
-</div>
+                <!-- Barre centre -->
+                <div class="mx-auto">
+                    <input 
+                        type="text" 
+                        class="form-control border border-dark search-input" 
+                        placeholder="Search..."
+                    />
+                </div>
+
+                <!-- gauche -->
+                <div class="d-flex align-items-center gap-3 me-3">
+                    <img src="{{ asset('icons/parameter.png') }}" alt="parameter" class="icons" />
+                    <div class="bg-warning rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                        <img src="{{ asset('images/profil.jpg') }}" alt="image de profil" class="profil-pic">
+                    </div>
+                </div>
+            </nav>
+
+
+        <div class="" style="margin-top: 80px; padding: 20px;">
+            <div class="d-flex flex-column align-items-center pt-5">
+                {% for feed in feed %}
+                    <div class="user-info ">
+                        {% if feed.content %}
+                            <div class="d-flex flex-column space align-items-center">
+                                <img src="data:image/png;base64,{{ feed.content }}" alt="Feed image" />
+                            {% else %}
+                                <p> No image available </p>
+                            </div>
+                        {% endif %}
+
+                            <div class="gap-3 d-flex flex-column content align-items-center mt-3">
+                                <img src="{{ asset('images/profil.jpg') }}" alt="image de profil" class="profil-pic"> 
+                                <u class=""><strong> {{ feed.user }} </strong></u> 
+                                <em style="color:rgb(60, 58, 58) ;">
+                                    {{ feed.description }}
+                                </em>
+                                <i>
+                                    {{ feed.createdAt|date('Y-m-d H:i:s') }}
+                                </i>
+                            </div>
+
+                            
+                {% endfor %}
+                <a href="/add" class="submit"> Ajouter </a>
+            </div>
+        </div>
 {% endblock %}
