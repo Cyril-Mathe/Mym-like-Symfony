@@ -2,13 +2,20 @@
 
 body {
     background-color: #a8d5ad;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
 }
+
+
+
 
 /* Add Feed */
 
 .input {
     background-color: white;
-    border: 6px solid rgba(117, 193, 143, 0.607);
+    border: 6px solid rgba(95, 82, 211, 0.915);
     border-radius: 15px;
     padding: 10px;
     margin: 10px;
@@ -63,12 +70,10 @@ body {
     margin-top: 30px;
 }
 
-.block-gif {
-    color: tomato;
-}
+
 
 .submit {
-    background: #9ed013;
+    background: #e2ed4a;
     font-family: inherit;
     padding: 0.6em 1.3em;
     font-weight: 900;
@@ -89,3 +94,29 @@ body {
     transform: translate(0.05em, 0.05em);
     box-shadow: 0.05em 0.05em;
   }
+
+  .submit-2 {
+    background: #e2ed4a;
+    font-family: inherit;
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 18px;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+    cursor: pointer;
+    margin-top: 30px;
+  }
+  
+  button:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+  }
+  
+  button:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+  }
+
+
+  

@@ -6,13 +6,13 @@
     <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
 
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
      <nav class="navbar navbar-expand-lg bg-primary fixed-top">
             <div class="container-fluid d-flex align-items-center">
                 
                 <!-- droite -->
                 <div class="d-flex align-items-center gap-3">
-                    <img src="../AJOUTER.PNG" alt="LOGO" class="ms-3" width="50" height="50" />
+                    <img src="{{ asset('images/THE CREEK.gif') }}" alt="logo" style="width: 60px; height: 60px;"/>
                     <img src="{{ asset('icons/burger.png') }}" alt="burger input" class="icons"/>
                 </div>
 
@@ -34,10 +34,10 @@
                 </div>
             </nav>
 
-        <div class="mt-navbar" style="margin-top: 80px;">
+        <div class="mt-n" style="margin-top: 150px;">
             <div class="d-flex flex-column align-items-center">
 
-                <h1 class="text-light" style="border-radius: 10px; padding-bottom: 10px; padding-top: 7px ; padding-left: 15px; padding-right: 15px; color: ;">
+                <h1 class="text-dark" style="border-radius: 10px; padding-bottom: 10px; padding-top: 7px ; padding-left: 15px; padding-right: 15px; color: ;">
                     Ajouter un Feed
                 </h1>
 
@@ -53,11 +53,22 @@
                             <label for="description" class="text-user">Description :</label>
                             <input type="text" id="description" name="description" class="input">
                             <br><br>
-                            <button class="btn btn-success" type="submit">Ajouter</button>
+                            <button class="submit-2" type="submit">Ajouter</button>
                         </form>
                         <br>
                         <a href="/" class="btn btn-primary">Retourner à la home page</a>
             </div>
         </div>
+        <footer class="bg-dark text-light py-4 mt-auto" style="">
+        <div class="container d-flex justify-content-between align-items-center">
+            <strong class="me-5"> THE CREEK </strong>
+            <div class="d-flex gap-3 align-items-center">
+                <a href="#" class="text-light">A propos </a>
+                <a href="#" class="text-light">Contact</a>
+                <a href="#" class="text-light">Mentions légales</a>
+
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
